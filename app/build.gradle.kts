@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+
 }
 
 android {
@@ -66,4 +69,21 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.gson)
+    implementation(libs.retrofit)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.converterGson)
+    implementation(libs.coil.compose)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.roomKtx)
+      ksp(libs.roomCompiler)
+    implementation(libs.roomRuntime)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler.v244)
+    implementation(libs.hilt.navigation.compose)
+    implementation(libs.androidx.ui.test.junit4.android)
+    implementation(libs.ui.text.google.fonts)
+
+
 }
